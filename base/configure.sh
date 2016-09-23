@@ -1,7 +1,7 @@
 #!/bin/sh
 
 cat >> conf/storm.yaml <<EOF
-storm.local.dir: "/tmp"
+storm.local.dir: "/tmp/storm-local"
 EOF
 
 if [ -n "$1" ]; then
@@ -15,6 +15,6 @@ if [ -n "$2" ]; then
    cat >> conf/storm.yaml <<EOF
 nimbus.host: "$2"
 EOF
-fi   
+fi
 
 cat conf/storm.yaml
